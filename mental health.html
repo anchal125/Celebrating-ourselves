@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mental Health</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <style>
+
+body {
+  margin: -1vh 1vw;
+  padding: 0;
+  background-color: rgb(241, 230, 236);
+}
+
+#gif img {
+  width: 40vw; 
+  height: 50vh;
+  display: block; /* Ensures the image is centered correctly */
+  margin: 0 auto; /* Centers the image horizontally */
+}
+
+#fg img {
+  width: 35vw; /* Sets the width of the image to 50% of the viewport width */
+  height: 50vh; /* Sets the height of the image to 50% of the viewport height */
+  
+}
+
+  
+
+  .container {
+      max-width: 22vw;
+      margin: 0 auto;
+      padding: 2vw;
+    }
+
+    .container input[type="text"],
+.container input[type="email"] {
+  width: 14vw;
+  margin-bottom: 1vh;
+}
+    .container textarea {
+      width: 23vw;
+      height:15vh;
+
+      margin-bottom: 1vw;
+    }
+
+    .container input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 0.4vw 1vw;
+      border: none;
+      cursor: pointer;
+    }
+
+    .container input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    .message {
+      margin-top: 1.2vw;
+      padding: 1vw;
+      background-color: #f2f2f2;
+    }
+
+    .mood-box {
+      font-size: 0.9em; 
+      background-color: #f2f2f2;
+      padding:1.7vh;
+      border-radius: 2vw;
+      width: 18vw;
+      height:26vh;
+      margin: 0 auto;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .emoji {
+      font-size: 2.6em; 
+      cursor: pointer;
+    }
+    @media screen and (min-width: 768px) {
+      p ,li{
+    font-size: 1.3em; /* increase font size on screens with a width of 768px or more */
+    }
+}
+
+    @media (max-width: 768px) {
+
+      .mood-box {
+        font-size: 0.9em; 
+      width: 53vw;
+      height:25vh;
+      border-radius: 3vw;
+    
+    }
+
+
+
+      #gif img {
+        width: 60vw; 
+        height: 30vh;
+              
+      }
+
+      #fg img {
+        display:block;
+        margin:auto;
+        width: 59vw; /* Sets the width of the image to 50% of the viewport width */
+        height: 28vh; /* Sets the height of the image to 50% of the viewport height */
+        
+      }
+
+      .container input[type="text"],.container input[type="email"] {
+        width: 34vw;
+
+      }
+    .container textarea {
+      width: 41vw;
+      height:14vh;
+    }
+    .container {
+      max-width: 39vw;
+  
+    }
+    
+
+
+
+    }
+    
+
+
+  </style>
+
+  </head>
+
+  <body>
+    
+    
+    
+    <h2>What is mental health?</h2>
+    <p>  Mental health includes our emotional, psychological, and social well-being. It affects how we think, feel, and act. It also helps determine how we handle stress, relate to others, and make healthy choices. Mental health is important at every stage of life, from childhood and adolescence through adulthood.<br><br>
+      
+    </p>
+      <div class="mood-box" id="mood-box">
+        <h3>Whats your current your mood:</h3>
+        <div class="emoji" onclick="selectMood('happy')">😄</div>
+        <div class="emoji" onclick="selectMood('sad')">😔</div>
+      </div>
+
+   
+
+      
+      
+      <h2>Can your mental health change over time?</h2>
+      <p>   Yes, it’s important to remember that a person’s mental health can change over time, depending on many factors.  When the demands placed on a person exceed their resources and coping abilities, their mental health could be impacted. For example, if someone is working long hours, caring for a relative, or experiencing economic hardship, they may experience poor mental health.</p> 
+      
+      
+      
+      <h2>Do I Have Anxiety, Depression or Both? Here’s How to Tell</h2><p>  Depression and anxiety might seem pretty distinct, for the most part.<br><br>
+      The main symptom of depression is typically a lingering low, sad, or hopeless mood, while anxiety mainly involves overwhelming feelings of worry, nervousness, and fear.<br>
+      It's normal to have feelings of anxiety or depression from time to time. But when these feelings happen often and they interfere with your life, you might have a disorder that’s treatable.
+      <br><br>It’s also possible to have both depression and anxiety at the same time: A worldwide survey from 2015 found that 41.6 percent of people reported having both major depression and an anxiety disorder during the same 12-month period.
+          <br>One important thing depression and anxiety have in common? Both can improve with support from a mental health professional.
+    <br><br></p>
+
+    <h2>Symptoms</h2>
+    <div id ="fg">
+      <img src="Screenshot 2023-07-04 165526.png" alt="your image description">
+      <img src="Screenshot 2023-07-04 165605.png" alt="your image description">
+  </div>
+    <h2>Questions to ask yourself</h2>
+    <ul>
+      <li>Do I spend a lot more time worrying than I have in the past?</li>
+      <li>Do I feel sad, empty, or hopeless often?</li>
+      <li>Have I lost interest in the things I used to enjoy?</li>
+      <li>Have I started to avoid spending time with friends and loved ones?</li>
+      <li>Do I worry about things I can't control to the point where I have a hard time thinking about anything else?</li>
+      <li>Do I become irritable or annoyed more quickly than I have in the past?</li>
+      <li>Do I often feel restless, on edge, or unable to relax?</li>
+      <li>Do I cycle through dark, unwanted, or fearful thoughts I can't seem to stop?</li>
+      <li>Is it difficult to fall asleep, get enough sleep, or wake up on time most days?</li>
+      <li>Have I noticed unexplained pain, tension, or other physical symptoms?</li>
+      <li>Do these changes affect my daily life or relationships?</li>
+    </ul>
+
+    <p>If you answered “yes” to most of the questions above, it may be time to reach out to a therapist.</p>
+
+
+    <h2>Coping Strategies</h2>
+    <ul>
+      <li>Take a time-out. Practice yoga, listen to music, meditate, get a massage, or learn relaxation techniques. Stepping back from the problem helps clear your head.</li>
+      <li>Eat well-balanced meals. Do not skip any meals. Do keep healthful, energy-boosting snacks on hand.</li>
+      <li>Limit alcohol and caffeine, which can aggravate anxiety and trigger panic attacks.</li>
+      <li>Get enough sleep. When stressed, your body needs additional sleep and rest.</li>
+      <li>Exercise daily to help you feel good and maintain your health. Check out the fitness tips below.</li>
+      <li>Take deep breaths. Inhale and exhale slowly.</li>
+      <li>Count to 10 slowly. Repeat, and count to 20 if necessary.</li>
+      <li>Do your best. Instead of aiming for perfection, which isn't possible, be proud of however close you get.</li>
+      <li>Accept that you cannot control everything. Put your stress in perspective: Is it really as bad as you think?</li>
+      <li>Welcome humor. A good laugh goes a long way.</li>
+      <li>Maintain a positive attitude. Make an effort to replace negative thoughts with positive ones.</li>
+      <li>Get involved. Volunteer or find another way to be active in your community, which creates a support network and gives you a break from everyday stress.</li>
+      <li>Learn what triggers your anxiety. Is it work, family, school, or something else you can identify? Write in a journal when you’re feeling stressed or anxious, and look for a pattern.</li>
+      <li>Talk to someone. Tell friends and family you’re feeling overwhelmed, and let them know how they can help you. Talk to a physician or therapist for professional help.</li>
+    </ul>
+
+
+    <div id ="gif">
+    <img src="3342512i.webp" alt="Animated GIF">
+  </div>
+
+    <h2>The bottom line</h2>
+  <p> Everyone experiences occasional bouts of anxiety and nervousness.<br><br>
+      
+      Whether it’s the anticipation of a new job, nerves before meeting someone, or the uneasiness you feel when facing a potentially dangerous situation, anxiety is a normal reaction to stress.
+      
+      <br><br>However, when this normal reaction turns excessive and you find yourself overly worried and anxious about things like daily tasks or situations that others see as nonthreatening, you may have an anxiety disorder.
+      
+      <br><br>If this is the case, consider making an appointment with a doctor. They can do a general exam and refer you to a mental health professional.
+    </p>
+
+
+    <div class="container">
+      <h2>Query Form</h2>
+      <form id="queryForm">
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+        </div>
+    
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Your email" required>
+        </div>
+    
+        <div>
+          <label for="query">Query:</label>
+          <textarea id="query" name="query" placeholder="Your query" rows="5" required></textarea>
+        </div>
+          <input type="submit" value="Send">
+      </form>
+      <div id="message" class="message" style="display: none;"></div>
+  </div>
+
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+  <script>
+    var moodSelected = false;
+    function selectMood(mood) {
+  var moodBox = document.getElementById('mood-box');
+  var messageElement = document.createElement('div');
+
+  // Remove previous contents of the mood box
+  moodBox.innerHTML = '';
+
+  // Check the selected mood and display the corresponding message
+  if (mood === 'happy') {
+    messageElement.innerHTML = "I'm delighted! 😄 <br><br> Fact: Good mood can boost our immunity to fight pandemics or even mental illnesses like dementia, depression, heart diseases, etc.";
+  } else if (mood === 'sad') {
+    messageElement.innerHTML = "I'm sorry you're feeling down. Here are some tips: <br><br> 1. You can listen to music, it really helps. <br> 2. You can hangout with friends, go for a walk or talk to someone.<br> 3. Medidate as it really calms mind. ";
+  } 
+
+  // Center the message element in the mood box
+  messageElement.style.display = 'flex';
+  messageElement.style.justifyContent = 'center';
+  messageElement.style.alignItems = 'center';
+  messageElement.style.height = '100%';
+
+  // Display the message inside the mood box
+  moodBox.style.display = 'block';
+  moodBox.appendChild(messageElement);
+}
+    
+
+
+
+
+function sendEmail() {
+  Email.send({
+    SecureToken: '2dd125f1-6208-4625-a6a1-ddb4cd772782',
+    To: "anchalsehgal1oct@gmail.com",
+    From: document.getElementById("email").value,
+    Subject: "New Query",
+    Body:
+      "Name: " +
+      document.getElementById("name").value +
+      "<br> Email: " +
+      document.getElementById("email").value +
+      "<br> Query: " +
+      document.getElementById("query").value,
+  }).then((message) => {
+  console.log(message);
+    // Clear form inputs
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("query").value = "";
+
+    // Show message
+    var message = document.getElementById("message");
+    message.style.display = "block";
+    message.textContent = "Query submitted. We will get back to you soon.";
+
+    setTimeout(function () {
+      message.style.display = "none";
+    }, 15000);
+
+    message.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+}
+
+document.getElementById("queryForm").addEventListener("submit", function (event) {
+  event.preventDefault(); // Prevent form submission
+  sendEmail();
+});
+  </script>
+
+  </body>
+
+
+</html>

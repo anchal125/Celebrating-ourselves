@@ -1,0 +1,221 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <title>Meditation</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+<style>
+p{
+  font-size: 1.5vw;
+  background-color: rgba(247, 245, 246, 0.7);
+  text-align: left;
+}
+
+h1{
+  font-size: 4.1vw;
+}
+
+body {
+  background-image: url("GettyImages-938890492-becc3fc4757849bea672f148454943f9.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 70vw;
+  height: auto;
+}
+
+
+.container {
+  background-color: #fff;
+  width: 100vw;
+  max-width: 60vw;
+  margin: 2.5vw auto 5vw auto;
+  padding: 2.5vw;
+  border-radius: 1.67vw;
+  box-shadow: 0 0 1.67vw rgba(0, 0, 0, 0.338);
+}
+
+.timer-display {
+  font-family: 'Roboto mono', monospace;
+  color: #8c52ff;
+  font-size: 3vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 13vh;
+  margin-top: 2.5vh;
+  margin-bottom: 3.75vh;
+  border-radius: 1.67vw;
+  box-shadow: 0 0 1.67vw rgba(65, 5, 145, 0.25);
+}
+.meditate {  
+  width: 100%;
+  text-align: center;
+}
+
+
+.meditate p {
+  margin: 5vw;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons button {
+  background-color: #8c52ff;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.33vw;
+  padding: 1.33vw;
+  border: none;
+  border-radius: 1.33vw;
+  margin: 0 1.33vw;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.buttons button:hover {
+  background-color: #4e01f2;
+}
+
+button {
+  background-color: #5168a3; /* Green */
+  border: none;
+  color: white;
+  padding: 1.33vw 2.67vw;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.33vw;
+  margin: 1.33vw;
+  cursor: pointer;
+  border-radius: 1.33vw;
+}
+
+button:hover {
+  background-color: #2600bf; /* Dark green */
+}
+
+button:active {
+  background-color: #35698a; /* Dark green */
+  box-shadow: 0 0.33vw #666;
+  transform: translateY(0.27vw);
+}
+
+
+
+</style>
+</head>
+<body>
+
+<div class="meditate">  
+  <h1>Meditation</h1>
+  <p><span style="color: rgb(45, 0, 128); font-weight: bold;font-size:xx-large;">Start the timer at bottom and lets meditate together for tranquility.</span><br><br>Breathing is essential part of any yoga pose which are related to Pranayama or Meditation. <br>
+    Sukhasana too works best when the inhalation and the exhalation is done with awareness of the movement of the spine.<br><br>
+
+    <span style="color: rgb(45, 0, 128);font-weight: bold;">1.Inhale: </span> Bring your legs close to you, cross them at the shins, and place the feet below the opposite thighs.<br>
+    <span style="color: rgb(45, 0, 128);font-weight: bold;">2.Exhale: </span> Once the legs are in this position, exhale.<br>
+    <span style="color: rgb(45, 0, 128);font-weight: bold;">3.Inhale: </span> Place the outer wrists on the closest knee, with the thumb and the index finger joined at the tips. <br>
+    <span style="color: rgb(45, 0, 128);font-weight: bold;">4.</span> Have the other three fingers stretched out and pointing downwards.<br>
+    <span style="color: rgb(45, 0, 128);font-weight: bold;">5.Exhale: </span> Raise the back and align the hips such that you are sitting on the sit bones.<br>
+    <span style="color: rgb(45, 0, 128);font-weight: bold;">6.Inhale: </span> Close your eyes, loosen the body and relax the eyes completely.<br>
+    <span style="color: rgb(45, 0, 128);font-weight: bold;">7.Exhale: </span> Raise the entire upper body upwards and bring the chest out in front.<br>
+    <span style="color: rgb(45, 0, 128);font-weight: bold;">8.</span> Pull in the tummy to the maximum extent possible without feeling any stress while doing it.<br>
+    <span style="color: rgb(45, 0, 128);font-weight: bold;">9.</span> Inhale and Exhale: Begin the slow movement of the body and with every inhalation bring the body loose and as you exhale expand the spine upwards and move upwards pushing the lower back inside and upper back upwards. Sink the legs and the knees deep into the floor without pushing them. Repeat this and slowly bring the body and mind awareness to the Pranayama you are practicing while in this yoga pose and relax your facial muscles.
+    <br><br>Below is a picture demonstrating Sukhasana.</p>
+   
+
+  <img src="come-fare-sukhasana.jpg" alt="Meditation image">
+  
+  <h1>Lets start</h1>
+
+  <div class="container">
+    <div class="timer-display">
+        00 : 00 : 00 : 000
+    </div>
+    <div class="buttons">
+        <button id="start-timer">Start</button>
+        <button id="pause-timer">Pause</button>
+        <button id="reset-timer">Reset</button>
+    </div>
+    <audio id="timer-music" src="relaxing-mountains-rivers-streams-running-water-18178.mp3" loop></audio>
+    <button id="stop-music">Stop Music</button>
+</div>
+  
+</div>
+<script>
+let [milliseconds, seconds, minutes, hours] = [0, 0, 0, 0];
+let timeRef = document.querySelector(".timer-display");
+let int = null;
+let audio = document.getElementById("timer-music");
+
+document.getElementById("start-timer").addEventListener("click", () => {
+    if (int !== null) {
+        clearInterval(int);
+    }
+    int = setInterval(displayTimer, 10);
+    audio.play();
+});
+
+document.getElementById("pause-timer").addEventListener("click", () => {
+    clearInterval(int);
+    audio.pause();
+});
+
+document.getElementById("reset-timer").addEventListener("click", () => {
+    clearInterval(int);
+    [milliseconds, seconds, minutes, hours] = [0, 0, 0, 0];
+    timeRef.innerHTML = "00 : 00 : 00 : 000 ";
+    audio.pause();
+    audio.currentTime = 0;
+});
+
+document.getElementById("stop-music").addEventListener("click", () => {
+    audio.pause();
+    audio.currentTime = 0;
+});
+
+function displayTimer() {
+    milliseconds += 10;
+    if (milliseconds == 1000) {
+        milliseconds = 0;
+        seconds++;
+        if (seconds == 60) {
+            seconds = 0;
+            minutes++;
+            if (minutes == 60) {
+                minutes = 0;
+                hours++;
+            }
+        }
+    }
+
+    let h = hours < 10 ? "0" + hours : hours;
+    let m = minutes < 10 ? "0" + minutes : minutes;
+    let s = seconds < 10 ? "0" + seconds : seconds;
+    let ms =
+        milliseconds < 10
+            ? "00" + milliseconds
+            : milliseconds < 100
+            ? "0" + milliseconds
+            : milliseconds;
+
+    timeRef.innerHTML = `${h} : ${m} : ${s} : ${ms}`;
+}
+
+// Set the loop property of the audio element to true
+audio.loop = true;
+
+
+</script>
+
+</body>
+</html>  

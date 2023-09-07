@@ -1,0 +1,143 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhagavad-Gita</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+<style>
+  body {
+  background-image: url("partha-sarathi-krishna-speaks-the-bhagavad-gita-to-arjuna-dominique-amendola_cf98c1cc-5bb5-4200-823b-933ea2b8ebe6_grande.jpg");  
+  background-size: cover;
+  
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  
+  margin: 0;
+  padding: 0;
+  
+}
+
+  .dropdown {
+position: relative;
+display: inline-block;
+}
+
+.dropbtn,#new-page-btn{
+  width:auto;
+background-color: #240121;
+color: white;
+padding: 1vh;
+font-size: 1.5vw;
+border: none;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #caa5ca;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+.dropdown-content a {
+font-size: 0.8vw;
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+.centered-text {
+	position: absolute;
+  background-color: rgba(222, 210, 218, 0.7);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 75vw;
+	height: 80vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: 2vw;
+	line-height: 3vw;		
+}
+
+@media (max-width: 768px) {  
+.centered-text{
+font-size: 2.5vh; 
+line-height:3vh;  /* Changed to em units and removed !important */
+} 
+.dropdown-content a {
+font-size: 2vw;
+} 
+
+.dropbtn,#new-page-btn {
+height:4.7vh;
+width:auto;
+padding:1.1vh;
+font-size: 2.5vh;
+
+
+}
+
+
+}
+	
+</style>
+</head>
+<body>
+
+<div class="dropdown">
+  <button class="dropbtn">Chapters</button>
+  
+  <div class="dropdown-content">
+    <a href="https://www.bhagavad-gita.org/Gita/chapter-01.html"target="_blank">Chapter 1</a>   
+    <a href="https://www.bhagavad-gita.org/Gita/chapter-02.html"target="_blank">Chapter 2 </a>  
+    <a href="https://www.bhagavad-gita.org/Gita/chapter-03.html"target="_blank">Chapter 3</a>     
+    <a href="https://www.bhagavad-gita.org/Gita/chapter-04.html"target="_blank">Chapter 4</a>   
+    <a href="https://www.bhagavad-gita.org/Gita/chapter-05.html"target="_blank">Chapter 5 </a>  
+    <a href="https://www.bhagavad-gita.org/Gita/chapter-06.html"target="_blank">Chapter 6</a>   
+    <a href="https://www.bhagavad-gita.org/Gita/chapter-07.html"target="_blank">Chapter 7</a>   
+    <a href="https://www.bhagavad-gita.org/Gita/chapter-08.html"target="_blank">Chapter 8 </a>  
+    <a href="https://www.bhagavad-gita.org/Gita/chapter-09.html"target="_blank">Chapter 9</a>   
+    <a href="https://www.bhagavad-gita.org/Gita/chapter-10.html"target="_blank">Chapter 10</a>   
+    <a href="https://www.bhagavad-gita.org/Gita/chapter-11.html"target="_blank">Chapter 11 </a>  
+    <a href="https://www.bhagavad-gita.org/Gita/chapter-12.html"target="_blank">Chapter 12</a>   
+    <a href="https://www.bhagavad-gita.org/Gita/chapter-13.html"target="_blank">Chapter 13 </a>  
+    <a href="https://www.bhagavad-gita.org/Gita/chapter-14.html"target="_blank">Chapter 14</a>   
+    <a href="https://www.bhagavad-gita.org/Gita/chapter-15.html"target="_blank">Chapter 15</a>   
+    <a href="https://www.bhagavad-gita.org/Gita/chapter-16.html"target="_blank">Chapter 16 </a>  
+    <a href="https://www.bhagavad-gita.org/Gita/chapter-17.html"target="_blank">Chapter 17</a>   
+    <a href="https://www.bhagavad-gita.org/Gita/chapter-18.html"target="_blank">Chapter 18</a>   
+    
+  </div>
+</div> 
+<button id="new-page-btn">Shloka</button>
+
+<div class="centered-text">
+  The Bhagavad Gita and the battle of everyday life.
+  Whether from the perspective of an ancient Yogi or a modern-day practitioner, the Bhagavad Gita speaks to anyone who ever feels as though their mind is a battlefield.
+</div>
+<script>
+  const newPageBtn = document.getElementById("new-page-btn");
+
+newPageBtn.addEventListener("click", () => {
+  window.location.href = "shloka.html";
+});
+
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Celebrating Ourselves</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    
+    body {
+  background-image: url("pink-324175_1280.jpg");  
+  background-size: cover;
+  
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  
+  margin: 0;
+  padding: 0;
+  font-size: 3vh; /* converted from 16px */
+}
+
+.container {
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 5vh; /* converted from 50px */
+  background-color: #333;
+}
+
+
+
+.container a {
+  color: #f2ecec;    
+  margin: 0 1.5vw; /* converted from 10px */
+  text-decoration: none;   
+}
+
+.container a:hover {
+  color: #ae4195;    
+}
+
+
+
+#home {
+  color: rgb(207, 211, 207);    
+}
+
+#home.active {
+  color: rgb(214, 145, 216);   
+}
+
+.overlay {
+  display:none;
+  position: fixed;
+  top: 34%;  /* move the pop-up down by 50% of the page height */
+  left: 38%;
+  width: 27vw;
+  height:32vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup {
+  display: flex; /* Added */
+  justify-content: center; /* Centers items horizontally */ 
+  position: relative;
+  background-color: #fff;
+  padding: 0;
+  flex-direction: column;
+}
+
+.close {
+  position: absolute;
+  top: 0.1vw; /* converted from 10px */
+  right: 1vw; /* converted from 10px */
+  font-size: 2.4vw; /* converted from 20px */
+  color: #333;
+  cursor: pointer;
+}
+
+.popup img {
+  
+  width: 27vw;
+  height:32vh;
+}
+
+p, h2 {
+    text-align: center;
+    background-color: rgba(244, 220, 235, 0.7);
+  padding: 5vw; /* converted from 20px */
+  font-size: 2.1vw; /* converted from 18px */
+}
+
+.hr {
+  height: 0.067vw; /* converted from 1px */
+  background: black;
+}    
+
+
+    
+img {
+  display: block;
+  width: 100%;
+  height:80vh;
+}
+
+video {
+    
+    width: 32%;
+    height: 91vh; /* Change this to your desired height */
+    object-fit: cover; /* Prevents black bars from appearing around the video */
+    margin: 0 33vw;
+    background-color: rgba(244, 220, 235, 0.7);
+  }
+
+  
+
+
+
+
+#playButton{
+  margin: 0vw 47vw 1vw 47vw;
+  width: 5%;
+  height: 10%;
+  border-radius: 50%;
+  border-color: #ae4195;
+  background-color: rgb(243, 242, 243);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#playButton img{
+  width: 55%;
+  height: 8%;
+}
+
+
+.hamburger {
+  display: none;
+  background-color: #c573b2;
+  color: #150116;
+  font-size: 3.1vw; /* converted from 18px */
+  cursor: pointer;
+  margin:0 0.8vw;
+  
+}
+@media (max-width: 768px) {
+
+  .menu {
+    display: none;
+  }
+
+  .menu.active {
+  display: block;
+}
+
+.container {
+    position: relative;
+  }
+  .hamburger {
+    display: block;
+  }
+  .menu {
+    position: absolute;
+    top: 100%;
+    background-color: #d48bc3;
+    padding: 10px;
+    border: 1px solid #ddd;
+    z-index: 1;
+    list-style: none; /* Remove default list styles */
+    margin: 0; /* Remove default margin */
+  }
+
+  .menu a {
+    display: block; /* Display menu items as block elements */
+    padding: 5px 10px; /* Add padding to menu items */
+    text-decoration: none; /* Remove underline from menu items */
+    color: #110109; /* Set menu item text color */
+    border-bottom: 1px solid #26021e;
+  }
+  
+
+  #home {
+    order: 1;
+  }
+  
+  .hamburger {
+    order: 2;
+  }
+  
+
+#playButton{
+margin:0 46vw 1vw 44vw!important;
+width: 10%!important;
+height: 5%!important;
+
+}
+
+#playButton img{
+width: 55%!important;
+height: 8%!important;
+}
+/* Styles for screens with a maximum width of 768px go here */
+.container a {
+font-size:4.6vw;
+
+}
+p,h2{
+font-size: 2vh!important;
+}
+
+.overlay {
+width: 45vw!important;
+height:28vh!important;
+top: 36%!important; /* move the pop-up down by 50% of the page height */
+left: 27%!important;
+}
+.popup img {
+width: 45vw!important;
+height:29vh!important;
+}
+
+.close {
+
+font-size: 6vw!important;/* converted from 20px */
+
+}
+
+video {
+  
+  height: 30vh!important; /* Change this to your desired height */
+  
+}
+
+img {
+
+height:80vw!important;
+}
+
+}
+
+ 
+  </style>
+</head>
+
+<body>
+  
+    
+  <div class="overlay">
+    <div class="popup">
+      <span class="close">&times;</span>
+      <img src="Pure-Ella-Accept-yourself.jpg" alt="Pop-up Image">
+    </div>
+  </div>
+ 
+  <div class="container">
+    <button class="hamburger">&#9776;</button>
+    <div class="menu">
+      <a href="about-us.html" id="about-us">About us</a>    
+      <a href="bhagvad.html" id="gh">Bhagavad-Gita</a> 
+      <a href="medi.html" id="medi">Meditation</a> 
+      <a href="mental health.html" id="mental-health">Mental Health</a> 
+    </div>
+    <a href="index.html" id="home" class="active">Home</a>  
+
+  </div>
+  <img src="love.avif" alt="your image description">
+  <h2>You are special. You are worthy. You have a kind of magic that can never be imitated. 
+  <br>You are a blessing. You are spectacular. You are most beautiful when you are yourself.<br>
+
+    How did these words make you feel? I'm betting on the chance that they did something to your heart.
+  <br>
+    It feels wonderful when someone appreciates you for who you are just as you are, doesn't it? 
+  <br>When they encourage you to be yourself more and love you for it.
+  <br>
+    We all deserve that. But, we deserve that most from our own selves. <br>
+    So, I'm glad you're here looking for words that will inspire you to be yourself. Here they are,
+    <hr>
+  </h2>
+
+
+  <p>“Nothing brings down walls as surely as acceptance.”
+    <br>
+     ― Deepak Chopra
+    <br>
+    <br>
+    “Be who you are and say what you feel, because those who mind don't matter, and those who matter don't mind.”
+    <br>
+    ― Bernard M. Baruch
+    <br>
+    <br>
+    “You are imperfect, permanently and inevitably flawed. And you are beautiful.”
+    <br>
+    ― Amy Bloom
+    <br>
+    <br>
+    “To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.”
+    <br>
+    ― Ralph Waldo Emerson
+    <br>
+    <br>
+    “You may not control all the events that happen to you, but you can decide not to be reduced by them.”
+    <br>
+    ― Maya Angelou
+    <br>
+    <br>
+    <span style="color: rgb(27, 1, 15); font-weight: bold;">Whatever happened, happened for the good. Whatever is happening, is happening for the good. Whatever will happen, will also happen for the good.<br>
+      "Lets listen the words of Shri Krishna."</span>
+  </p>
+    <video controls>
+      <source src="हमेशा-उम्मीद-रखिए-_-Shree-krishna-status-_-Bhagwat-geeta-saar-_-Bhagwat-geeta-_-Geeta-Gyan720P_HD.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <button id="playButton" onclick="myVideo.play()">
+      <img src="play-button.png" alt="Play">
+    </button>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+
+const hamburger = document.querySelector('.hamburger');
+const menu = document.querySelector('.menu');
+
+hamburger.addEventListener('click', () => {
+  menu.classList.toggle('active');
+});
+
+// Added this 
+document.addEventListener('click', e => {
+  if (e.target !== hamburger && e.target !== menu) {
+    menu.classList.remove('active');
+  }
+});
+
+  function setCookie(name, value, days) {
+    var expires = '';
+    if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      expires = '; expires=' + date.toUTCString();
+    }
+    document.cookie = name + '=' + value + expires + '; path=/';
+  }
+
+  function getCookie(name) {
+    var nameEQ = name + '=';
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) === ' ') {
+        c = c.substring(1, c.length);
+      }
+      if (c.indexOf(nameEQ) === 0) {
+        return c.substring(nameEQ.length, c.length);
+      }
+    }
+    return null;
+  }
+
+  $(document).ready(function() {
+    var seenPopup = getCookie('seenPopup');
+
+    if (seenPopup === null) {
+      $('.overlay').css('display', 'flex'); // Display the overlay
+
+      $('.overlay .close').click(function() {
+        $(this).closest('.overlay').hide();
+      });
+
+      setCookie('seenPopup', 'true', 1);
+    } else {
+      $('.overlay').hide(); // Hide the popup if the cookie is already set
+    }
+  });
+  var myVideo = document.getElementsByTagName('video')[0];
+  myVideo.addEventListener('loadeddata', function() {
+    myVideo.play();
+  });
+
+</script>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/649bf039cc26a871b0251d01/1h40i4oft';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
+
+
+</body>
+
+</html>
